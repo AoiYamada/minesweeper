@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./dist/MineSweeper.js"></script>
+</head>
+
+<body>
+  <script>
+    var game = new MineSweeper({
+      width: 10,
+      height: 10,
+      mine: 10,
+    });
+    var open = (x, y) => {
+      game.open(x, y);
+      console.log("Time:", game.timer);
+      console.log("State:", game.state.toString());
+      console.log(game.toString())
+    }
+    var flag = (x, y) => {
+      game.flag(x, y);
+      console.log(game.toString())
+    }
+  </script>
+</body>
+
+</html>

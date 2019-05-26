@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["es2015",
+    {
+      "loose": true
+    }],
+    "stage-0"
+  ],
+  "plugins": [
+    [
+      "transform-builtin-extend",
+      {
+        "globals": ["Array"],
+        "approximate": false
+      },
+      "transform-es2015-destructuring"
+    ],
+    "transform-es3-member-expression-literals",
+    "transform-es3-property-literals"
+  ]
+}
