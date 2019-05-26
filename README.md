@@ -1,6 +1,6 @@
 ## Installation
 ```bash
-npm i git+http://
+npm i git+https://github.com/AoiYamada/minesweeper
 ```
 
 ## Usage
@@ -11,14 +11,14 @@ npm i git+http://
 ## Creat a new game
 ```js
 var game = new MineSweeper({
-	width: 10,
-	height: 10,
-	mine: 10,
+  width: 10,
+  height: 10,
+  mine: 10,
 });
 ```
 
 ## Play it in console
-only 2 methods are avalible
+Only 2 methods are available
 ```js
 var open = (x, y) => {
   game.open(x, y);
