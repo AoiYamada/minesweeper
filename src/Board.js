@@ -1,14 +1,14 @@
 const { isPositiveInts } = require('./Validator');
 const { sample, create2dCellBoard } = require('./Util');
 
-const LOSE = 0x11; // 3
-const WIN = 0x01; // 1
-const CONTINUE = 0x00; // 0
+const LOSE = 0b11; // 3
+const WIN = 0b01; // 1
+const CONTINUE = 0b00; // 0
 
 const gameStateMapper = {
-  0x11: Symbol("LOSE"),
-  0x01: Symbol("WIN"),
-  0x00: Symbol("CONTINUE"),
+  0b11: Symbol("LOSE"),
+  0b01: Symbol("WIN"),
+  0b00: Symbol("CONTINUE"),
 }
 
 module.exports = class Board {
