@@ -1,6 +1,4 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-"use strict";
-
 // https://github.com/angular/angular/issues/24488
 (function () {
   Object.setPrototypeOf = Object.setPrototypeOf || ({ __proto__: [] } instanceof Array ? setProtoOf : mixinProperties);
@@ -11,7 +9,7 @@
   }
 
   function mixinProperties(obj, proto) {
-    for (var prop in proto) {
+    for (const prop in proto) {
       if (!obj.hasOwnProperty(prop)) {
         obj[prop] = proto[prop];
       }
@@ -7565,46 +7563,32 @@ require('./modules/web.dom.iterable');
 module.exports = require('./modules/_core');
 
 },{"./modules/_core":24,"./modules/es6.array.copy-within":149,"./modules/es6.array.every":150,"./modules/es6.array.fill":151,"./modules/es6.array.filter":152,"./modules/es6.array.find":154,"./modules/es6.array.find-index":153,"./modules/es6.array.for-each":155,"./modules/es6.array.from":156,"./modules/es6.array.index-of":157,"./modules/es6.array.is-array":158,"./modules/es6.array.iterator":159,"./modules/es6.array.join":160,"./modules/es6.array.last-index-of":161,"./modules/es6.array.map":162,"./modules/es6.array.of":163,"./modules/es6.array.reduce":165,"./modules/es6.array.reduce-right":164,"./modules/es6.array.slice":166,"./modules/es6.array.some":167,"./modules/es6.array.sort":168,"./modules/es6.array.species":169,"./modules/es6.date.now":170,"./modules/es6.date.to-iso-string":171,"./modules/es6.date.to-json":172,"./modules/es6.date.to-primitive":173,"./modules/es6.date.to-string":174,"./modules/es6.function.bind":175,"./modules/es6.function.has-instance":176,"./modules/es6.function.name":177,"./modules/es6.map":178,"./modules/es6.math.acosh":179,"./modules/es6.math.asinh":180,"./modules/es6.math.atanh":181,"./modules/es6.math.cbrt":182,"./modules/es6.math.clz32":183,"./modules/es6.math.cosh":184,"./modules/es6.math.expm1":185,"./modules/es6.math.fround":186,"./modules/es6.math.hypot":187,"./modules/es6.math.imul":188,"./modules/es6.math.log10":189,"./modules/es6.math.log1p":190,"./modules/es6.math.log2":191,"./modules/es6.math.sign":192,"./modules/es6.math.sinh":193,"./modules/es6.math.tanh":194,"./modules/es6.math.trunc":195,"./modules/es6.number.constructor":196,"./modules/es6.number.epsilon":197,"./modules/es6.number.is-finite":198,"./modules/es6.number.is-integer":199,"./modules/es6.number.is-nan":200,"./modules/es6.number.is-safe-integer":201,"./modules/es6.number.max-safe-integer":202,"./modules/es6.number.min-safe-integer":203,"./modules/es6.number.parse-float":204,"./modules/es6.number.parse-int":205,"./modules/es6.number.to-fixed":206,"./modules/es6.number.to-precision":207,"./modules/es6.object.assign":208,"./modules/es6.object.create":209,"./modules/es6.object.define-properties":210,"./modules/es6.object.define-property":211,"./modules/es6.object.freeze":212,"./modules/es6.object.get-own-property-descriptor":213,"./modules/es6.object.get-own-property-names":214,"./modules/es6.object.get-prototype-of":215,"./modules/es6.object.is":219,"./modules/es6.object.is-extensible":216,"./modules/es6.object.is-frozen":217,"./modules/es6.object.is-sealed":218,"./modules/es6.object.keys":220,"./modules/es6.object.prevent-extensions":221,"./modules/es6.object.seal":222,"./modules/es6.object.set-prototype-of":223,"./modules/es6.object.to-string":224,"./modules/es6.parse-float":225,"./modules/es6.parse-int":226,"./modules/es6.promise":227,"./modules/es6.reflect.apply":228,"./modules/es6.reflect.construct":229,"./modules/es6.reflect.define-property":230,"./modules/es6.reflect.delete-property":231,"./modules/es6.reflect.enumerate":232,"./modules/es6.reflect.get":235,"./modules/es6.reflect.get-own-property-descriptor":233,"./modules/es6.reflect.get-prototype-of":234,"./modules/es6.reflect.has":236,"./modules/es6.reflect.is-extensible":237,"./modules/es6.reflect.own-keys":238,"./modules/es6.reflect.prevent-extensions":239,"./modules/es6.reflect.set":241,"./modules/es6.reflect.set-prototype-of":240,"./modules/es6.regexp.constructor":242,"./modules/es6.regexp.exec":243,"./modules/es6.regexp.flags":244,"./modules/es6.regexp.match":245,"./modules/es6.regexp.replace":246,"./modules/es6.regexp.search":247,"./modules/es6.regexp.split":248,"./modules/es6.regexp.to-string":249,"./modules/es6.set":250,"./modules/es6.string.anchor":251,"./modules/es6.string.big":252,"./modules/es6.string.blink":253,"./modules/es6.string.bold":254,"./modules/es6.string.code-point-at":255,"./modules/es6.string.ends-with":256,"./modules/es6.string.fixed":257,"./modules/es6.string.fontcolor":258,"./modules/es6.string.fontsize":259,"./modules/es6.string.from-code-point":260,"./modules/es6.string.includes":261,"./modules/es6.string.italics":262,"./modules/es6.string.iterator":263,"./modules/es6.string.link":264,"./modules/es6.string.raw":265,"./modules/es6.string.repeat":266,"./modules/es6.string.small":267,"./modules/es6.string.starts-with":268,"./modules/es6.string.strike":269,"./modules/es6.string.sub":270,"./modules/es6.string.sup":271,"./modules/es6.string.trim":272,"./modules/es6.symbol":273,"./modules/es6.typed.array-buffer":274,"./modules/es6.typed.data-view":275,"./modules/es6.typed.float32-array":276,"./modules/es6.typed.float64-array":277,"./modules/es6.typed.int16-array":278,"./modules/es6.typed.int32-array":279,"./modules/es6.typed.int8-array":280,"./modules/es6.typed.uint16-array":281,"./modules/es6.typed.uint32-array":282,"./modules/es6.typed.uint8-array":283,"./modules/es6.typed.uint8-clamped-array":284,"./modules/es6.weak-map":285,"./modules/es6.weak-set":286,"./modules/es7.array.flat-map":287,"./modules/es7.array.flatten":288,"./modules/es7.array.includes":289,"./modules/es7.asap":290,"./modules/es7.error.is-error":291,"./modules/es7.global":292,"./modules/es7.map.from":293,"./modules/es7.map.of":294,"./modules/es7.map.to-json":295,"./modules/es7.math.clamp":296,"./modules/es7.math.deg-per-rad":297,"./modules/es7.math.degrees":298,"./modules/es7.math.fscale":299,"./modules/es7.math.iaddh":300,"./modules/es7.math.imulh":301,"./modules/es7.math.isubh":302,"./modules/es7.math.rad-per-deg":303,"./modules/es7.math.radians":304,"./modules/es7.math.scale":305,"./modules/es7.math.signbit":306,"./modules/es7.math.umulh":307,"./modules/es7.object.define-getter":308,"./modules/es7.object.define-setter":309,"./modules/es7.object.entries":310,"./modules/es7.object.get-own-property-descriptors":311,"./modules/es7.object.lookup-getter":312,"./modules/es7.object.lookup-setter":313,"./modules/es7.object.values":314,"./modules/es7.observable":315,"./modules/es7.promise.finally":316,"./modules/es7.promise.try":317,"./modules/es7.reflect.define-metadata":318,"./modules/es7.reflect.delete-metadata":319,"./modules/es7.reflect.get-metadata":321,"./modules/es7.reflect.get-metadata-keys":320,"./modules/es7.reflect.get-own-metadata":323,"./modules/es7.reflect.get-own-metadata-keys":322,"./modules/es7.reflect.has-metadata":324,"./modules/es7.reflect.has-own-metadata":325,"./modules/es7.reflect.metadata":326,"./modules/es7.set.from":327,"./modules/es7.set.of":328,"./modules/es7.set.to-json":329,"./modules/es7.string.at":330,"./modules/es7.string.match-all":331,"./modules/es7.string.pad-end":332,"./modules/es7.string.pad-start":333,"./modules/es7.string.trim-left":334,"./modules/es7.string.trim-right":335,"./modules/es7.symbol.async-iterator":336,"./modules/es7.symbol.observable":337,"./modules/es7.system.global":338,"./modules/es7.weak-map.from":339,"./modules/es7.weak-map.of":340,"./modules/es7.weak-set.from":341,"./modules/es7.weak-set.of":342,"./modules/web.dom.iterable":343,"./modules/web.immediate":344,"./modules/web.timers":345}],347:[function(require,module,exports){
-'use strict';
+const { isPositiveInts } = require('./Validator');
+const { sample, create2dCellBoard } = require('./Util');
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+const LOSE = 0x11; // 3
+const WIN = 0x01; // 1
+const CONTINUE = 0x00; // 0
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var _require = require('./Validator'),
-    isPositiveInts = _require.isPositiveInts;
-
-var _require2 = require('./Util'),
-    sample = _require2.sample,
-    create2dCellBoard = _require2.create2dCellBoard;
-
-var LOSE = 0x11; // 3
-var WIN = 0x01; // 1
-var CONTINUE = 0x00; // 0
-
-var gameStateMapper = {
+const gameStateMapper = {
   0x11: Symbol("LOSE"),
   0x01: Symbol("WIN"),
   0x00: Symbol("CONTINUE")
 };
 
-module.exports = function () {
-  function Board(_ref) {
-    var _ref$width = _ref.width,
-        width = _ref$width === undefined ? 10 : _ref$width,
-        _ref$height = _ref.height,
-        height = _ref$height === undefined ? 10 : _ref$height,
-        _ref$mine = _ref.mine,
-        mine = _ref$mine === undefined ? 10 : _ref$mine;
-
-    _classCallCheck(this, Board);
-
+module.exports = class Board {
+  constructor({
+    width = 10,
+    height = 10,
+    mine = 10
+  }) {
     isPositiveInts([width, height, mine]);
     if (mine > width * height) throw "TOO_MANY_MINES";
 
     this.width = width;
     this.height = height;
     this.mine = mine;
+    this.mines = [];
     this.remain = width * height - mine;
     this.total = this.remain; // constant
     this.board = create2dCellBoard(width, height);
@@ -7613,50 +7597,32 @@ module.exports = function () {
     this._state = CONTINUE;
   }
 
-  Board.prototype.init = function init(cell) {
-    var _this = this;
-
+  init(cell) {
     if (this.remain === this.total) {
-      var mines = sample(this.board.flat().filter(function (_cell) {
-        return _cell !== cell;
-      }), this.mine); // sampling cells expect the cell user clicked
-      for (var _iterator = mines, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-        var _ref2;
-
-        if (_isArray) {
-          if (_i >= _iterator.length) break;
-          _ref2 = _iterator[_i++];
-        } else {
-          _i = _iterator.next();
-          if (_i.done) break;
-          _ref2 = _i.value;
-        }
-
-        var mine = _ref2;
-
+      this.mines = sample(this.board.flat().filter(_cell => _cell !== cell), this.mine); // sampling cells expect the cell user clicked
+      for (const mine of this.mines) {
         mine.mine_counter = -1; // set mine
         // console.log("Mine:", mine);
         this.increaseSiblingsMineCounter(mine);
       }
-      this.timerReference = setInterval(function () {
-        return ++_this.timer;
-      }, 1000);
+      this.timerReference = setInterval(() => ++this.timer, 1000);
     } else {
       console.warn("SHOULD_INIT_ONCE_ONLY");
     }
-  };
+  }
 
-  Board.prototype.open = function open(x, y) {
-    var cell = this.board[y][x];
+  open(x, y) {
+    const cell = this.board[y][x];
     if (this.remain >= this.total) {
       this.init(cell);
     }
 
     switch (cell.state) {
       case 0:
-        var isMine = cell.open();
+        const isMine = cell.open();
         if (isMine) {
           clearInterval(this.timerReference);
+          this.openAllMines();
           this._state |= LOSE;
           return LOSE;
         };
@@ -7681,10 +7647,16 @@ module.exports = function () {
       default:
         return CONTINUE;
     }
-  };
+  }
 
-  Board.prototype.flag = function flag(x, y) {
-    var cell = this.board[y][x];
+  openAllMines() {
+    for (const mine of this.mines) {
+      mine.open();
+    }
+  }
+
+  flag(x, y) {
+    const cell = this.board[y][x];
     cell.flag();
     switch (cell.state) {
       case 0:
@@ -7698,132 +7670,62 @@ module.exports = function () {
       default:
         break;
     }
-  };
+  }
 
-  Board.prototype.getSiblings = function getSiblings(cell) {
-    return this.board.slice(Math.max(cell.y - 1, 0), cell.y + 2).map(function (row) {
-      return row.slice(Math.max(cell.x - 1, 0), cell.x + 2);
-    }).flat().filter(function (_cell) {
-      return _cell !== cell;
-    });
-  };
+  getSiblings(cell) {
+    return this.board.slice(Math.max(cell.y - 1, 0), cell.y + 2).map(row => row.slice(Math.max(cell.x - 1, 0), cell.x + 2)).flat().filter(_cell => _cell !== cell);
+  }
 
-  Board.prototype.openSiblings = function openSiblings(cell) {
-    var siblings = this.getSiblings(cell);
-    var result = CONTINUE;
-    for (var _iterator2 = siblings, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator]();;) {
-      var _ref3;
-
-      if (_isArray2) {
-        if (_i2 >= _iterator2.length) break;
-        _ref3 = _iterator2[_i2++];
-      } else {
-        _i2 = _iterator2.next();
-        if (_i2.done) break;
-        _ref3 = _i2.value;
-      }
-
-      var sibling = _ref3;
-
+  openSiblings(cell) {
+    const siblings = this.getSiblings(cell);
+    let result = CONTINUE;
+    for (const sibling of siblings) {
       if (sibling.state === 0) {
         result |= this.open(sibling.x, sibling.y);
       }
     }
     return result;
-  };
+  }
 
-  Board.prototype.increaseSiblingsMineCounter = function increaseSiblingsMineCounter(cell) {
-    var siblings = this.getSiblings(cell);
-    for (var _iterator3 = siblings, _isArray3 = Array.isArray(_iterator3), _i3 = 0, _iterator3 = _isArray3 ? _iterator3 : _iterator3[Symbol.iterator]();;) {
-      var _ref4;
-
-      if (_isArray3) {
-        if (_i3 >= _iterator3.length) break;
-        _ref4 = _iterator3[_i3++];
-      } else {
-        _i3 = _iterator3.next();
-        if (_i3.done) break;
-        _ref4 = _i3.value;
-      }
-
-      var sibling = _ref4;
-
+  increaseSiblingsMineCounter(cell) {
+    const siblings = this.getSiblings(cell);
+    for (const sibling of siblings) {
       sibling.increaseMineCounter();
     }
-  };
+  }
 
-  Board.prototype.increaseSiblingsFlagCounter = function increaseSiblingsFlagCounter(cell) {
-    var siblings = this.getSiblings(cell);
-    for (var _iterator4 = siblings, _isArray4 = Array.isArray(_iterator4), _i4 = 0, _iterator4 = _isArray4 ? _iterator4 : _iterator4[Symbol.iterator]();;) {
-      var _ref5;
-
-      if (_isArray4) {
-        if (_i4 >= _iterator4.length) break;
-        _ref5 = _iterator4[_i4++];
-      } else {
-        _i4 = _iterator4.next();
-        if (_i4.done) break;
-        _ref5 = _i4.value;
-      }
-
-      var sibling = _ref5;
-
+  increaseSiblingsFlagCounter(cell) {
+    const siblings = this.getSiblings(cell);
+    for (const sibling of siblings) {
       sibling.increaseFlagCounter();
     }
-  };
+  }
 
-  Board.prototype.decreaseSiblingsFlagCounter = function decreaseSiblingsFlagCounter(cell) {
-    var siblings = this.getSiblings(cell);
-    for (var _iterator5 = siblings, _isArray5 = Array.isArray(_iterator5), _i5 = 0, _iterator5 = _isArray5 ? _iterator5 : _iterator5[Symbol.iterator]();;) {
-      var _ref6;
-
-      if (_isArray5) {
-        if (_i5 >= _iterator5.length) break;
-        _ref6 = _iterator5[_i5++];
-      } else {
-        _i5 = _iterator5.next();
-        if (_i5.done) break;
-        _ref6 = _i5.value;
-      }
-
-      var sibling = _ref6;
-
+  decreaseSiblingsFlagCounter(cell) {
+    const siblings = this.getSiblings(cell);
+    for (const sibling of siblings) {
       sibling.decreaseFlagCounter();
     }
-  };
+  }
 
-  Board.prototype.toString = function toString() {
-    return "\n" + this.board.map(function (row) {
-      return row.join("");
-    }).join("\n") + "\n";
-  };
+  get state() {
+    return gameStateMapper[this._state];
+  }
 
-  _createClass(Board, [{
-    key: 'state',
-    get: function get() {
-      return gameStateMapper[this._state];
-    }
-  }]);
-
-  return Board;
-}();
+  toString() {
+    return "\n" + this.board.map(row => row.join("")).join("\n") + "\n";
+  }
+};
 
 },{"./Util":349,"./Validator":350}],348:[function(require,module,exports){
-"use strict";
+const { isInRange } = require('./Validator');
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var _require = require('./Validator'),
-    isInRange = _require.isInRange;
-
-var fullWidthStateMapper = {
+const fullWidthStateMapper = {
   0: "⬛",
   2: "⚐"
 };
 
-var fullWidthNumberMapper = {
+const fullWidthNumberMapper = {
   "-1": "💣",
   0: "⬜",
   1: "１",
@@ -7845,18 +7747,13 @@ var fullWidthNumberMapper = {
   //     open(): return isMine, true / false
   //     flag(): no return
   // }
-};module.exports = function () {
+};module.exports = class Cell {
   /**
    * @param {Object} position
    * @param {Integer} position.x
    * @param {Integer} position.y
    */
-  function Cell(_ref) {
-    var x = _ref.x,
-        y = _ref.y;
-
-    _classCallCheck(this, Cell);
-
+  constructor({ x, y }) {
     this.mine_counter = 0;
     this.flag_counter = 0;
     this.x = x;
@@ -7867,76 +7764,61 @@ var fullWidthNumberMapper = {
   /**
    * @return {Boolean} is_mine
    */
-
-
-  Cell.prototype.open = function open() {
+  open() {
     if (this.state == 0) {
       this.state = 1;
     }
     return this.mine_counter === -1;
-  };
+  }
 
-  Cell.prototype.flag = function flag() {
+  flag() {
     if (this.state !== 1) {
       this.state = Math.abs(2 - this.state);
     }
-  };
+  }
 
-  Cell.prototype.increaseMineCounter = function increaseMineCounter() {
+  increaseMineCounter() {
     if (this.mine_counter !== -1) this.mine_counter += 1;
     isInRange(this.mine_counter, -1, 8);
-  };
+  }
 
-  Cell.prototype.increaseFlagCounter = function increaseFlagCounter() {
+  increaseFlagCounter() {
     this.flag_counter += 1;
     isInRange(this.flag_counter, 0, 8);
-  };
+  }
 
-  Cell.prototype.decreaseFlagCounter = function decreaseFlagCounter() {
+  decreaseFlagCounter() {
     this.flag_counter -= 1;
     isInRange(this.flag_counter, 0, 8);
-  };
+  }
 
-  Cell.prototype.toString = function toString() {
+  get canOpenSiblings() {
+    return this.flag_counter >= this.mine_counter;
+  }
+
+  toString() {
     switch (this.state) {
       case 0:
       case 2:
         return fullWidthStateMapper[this.state];
     }
     return fullWidthNumberMapper[this.mine_counter];
-  };
-
-  _createClass(Cell, [{
-    key: "canOpenSiblings",
-    get: function get() {
-      return this.flag_counter >= this.mine_counter;
-    }
-  }]);
-
-  return Cell;
-}();
+  }
+};
 
 },{"./Validator":350}],349:[function(require,module,exports){
-'use strict';
-
-var Cell = require('./Cell');
+const Cell = require('./Cell');
 
 function create2dCellBoard(width, height) {
-  return Array.from({ length: height }, function (v, y) {
-    return Array.from({ length: width }, function (v, x) {
-      return new Cell({ x: x, y: y });
-    });
-  });
+  return Array.from({ length: height }, (v, y) => Array.from({ length: width }, (v, x) => new Cell({ x, y })));
 }
 
 // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 function shuffle(a) {
   a = a.slice(); // avoid side effect
-  for (var i = a.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var _ref = [a[j], a[i]];
-    a[i] = _ref[0];
-    a[j] = _ref[1];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
 }
@@ -7946,33 +7828,18 @@ function sample(a, num) {
 }
 
 module.exports = {
-  create2dCellBoard: create2dCellBoard,
-  shuffle: shuffle,
-  sample: sample
+  create2dCellBoard,
+  shuffle,
+  sample
 };
 
 },{"./Cell":348}],350:[function(require,module,exports){
-"use strict";
-
 function isInt(value) {
   if (typeof value !== "number" || value !== ~~value) throw "EXPECT_INT";
 }
 
 function isInts(ary) {
-  for (var _iterator = ary, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-    var _ref;
-
-    if (_isArray) {
-      if (_i >= _iterator.length) break;
-      _ref = _iterator[_i++];
-    } else {
-      _i = _iterator.next();
-      if (_i.done) break;
-      _ref = _i.value;
-    }
-
-    var value = _ref;
-
+  for (const value of ary) {
     isInt(value);
   }
 }
@@ -7986,57 +7853,31 @@ function isNonNegative(value) {
 }
 
 function isNonNegativeInts(ary) {
-  for (var _iterator2 = ary, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator]();;) {
-    var _ref2;
-
-    if (_isArray2) {
-      if (_i2 >= _iterator2.length) break;
-      _ref2 = _iterator2[_i2++];
-    } else {
-      _i2 = _iterator2.next();
-      if (_i2.done) break;
-      _ref2 = _i2.value;
-    }
-
-    var value = _ref2;
-
+  for (const value of ary) {
     isInt(value);
     isNonNegative(value);
   }
 }
 
 function isPositiveInts(ary) {
-  for (var _iterator3 = ary, _isArray3 = Array.isArray(_iterator3), _i3 = 0, _iterator3 = _isArray3 ? _iterator3 : _iterator3[Symbol.iterator]();;) {
-    var _ref3;
-
-    if (_isArray3) {
-      if (_i3 >= _iterator3.length) break;
-      _ref3 = _iterator3[_i3++];
-    } else {
-      _i3 = _iterator3.next();
-      if (_i3.done) break;
-      _ref3 = _i3.value;
-    }
-
-    var value = _ref3;
-
+  for (const value of ary) {
     isInt(value);
     isPositive(value);
   }
 }
 
 function isInRange(value, lowerBound, upperBound) {
-  if (value < lowerBound || value > upperBound) throw "EXPECT_RANGE_FROM_" + lowerBound + "_TO_" + upperBound;
+  if (value < lowerBound || value > upperBound) throw `EXPECT_RANGE_FROM_${lowerBound}_TO_${upperBound}`;
 }
 
 module.exports = {
-  isInt: isInt,
-  isInts: isInts,
-  isPositive: isPositive,
-  isNonNegative: isNonNegative,
-  isNonNegativeInts: isNonNegativeInts,
-  isPositiveInts: isPositiveInts,
-  isInRange: isInRange
+  isInt,
+  isInts,
+  isPositive,
+  isNonNegative,
+  isNonNegativeInts,
+  isPositiveInts,
+  isInRange
 };
 
 },{}]},{},[1]);

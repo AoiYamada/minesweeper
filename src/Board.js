@@ -23,6 +23,7 @@ module.exports = class Board {
     this.width = width;
     this.height = height;
     this.mine = mine;
+    this.mines = [];
     this.remain = width * height - mine;
     this.total = this.remain; // constant
     this.board = create2dCellBoard(width, height);
@@ -33,8 +34,8 @@ module.exports = class Board {
 
   init(cell) {
     if (this.remain === this.total) {
-      const mines = sample(this.board.flat().filter(_cell => _cell !== cell), this.mine); // sampling cells expect the cell user clicked
-      for (const mine of mines) {
+      this.mines = sample(this.board.flat().filter(_cell => _cell !== cell), this.mine); // sampling cells expect the cell user clicked
+      for (const mine of this.mines) {
         mine.mine_counter = -1; // set mine
         // console.log("Mine:", mine);
         this.increaseSiblingsMineCounter(mine);
@@ -56,6 +57,7 @@ module.exports = class Board {
         const isMine = cell.open();
         if (isMine) {
           clearInterval(this.timerReference);
+          this.openAllMines();
           this._state |= LOSE;
           return LOSE;
         };
@@ -79,6 +81,12 @@ module.exports = class Board {
 
       default:
         return CONTINUE;
+    }
+  }
+
+  openAllMines() {
+    for (const mine of this.mines) {
+      mine.open();
     }
   }
 
